@@ -166,7 +166,7 @@ header a:nth-of-type(5) {
   background-color: var(--White);
   border-radius: 5px;
   cursor: pointer;
-  padding: 20px;
+
 }
 .containers:nth-of-type(2) {
   top: -499.9px;
