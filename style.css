@@ -10,10 +10,12 @@
 * {
   font-family: "Public Sans";
   font-size: 18px;
+  display: masonry;
 }
 body {
   overflow-x: hidden;
   color: var(--Dark-Blue);
+  background-color: var(--Very-Light-Gray);
 }
 p {
   font-weight: 300;
@@ -166,7 +168,6 @@ header a:nth-of-type(5) {
   background-color: var(--White);
   border-radius: 5px;
   cursor: pointer;
-  padding: 20px;
 }
 .containers:nth-of-type(2) {
   top: -499.9px;
@@ -206,6 +207,10 @@ footer nav:nth-of-type(2) {
   top: -155px;
   left: 550px;
 }
+li {
+  list-style: none;
+  margin: 10px 0;
+}
 footer .img {
   position: relative;
   left: 100px;
@@ -226,18 +231,34 @@ footer a p {
   color: var(--Very-Light-Gray);
   margin: 15px;
 }
+/* 
+@media (max-width: 350px) {
+  .normal-h1 {
+    font-size: 24px;
+  }
 
-@media (max-width: 375px) {
+  #intro .big-h1 {
+    font-size: 28px;
+  }
+
+  #about p,
+  #about .container p {
+    font-size: 14px;
+  }
+
+  footer .img-container img {
+    width: 25px;
+  }
+} */
+@media (max-width: 650px) {
   * {
-    font-size: 13px;
     padding: 2px;
   }
-  .containers img {
-    width: 100%;
-    height: 30%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+
+  body {
+    overflow-x: hidden;
   }
+
   header {
     flex-direction: column;
     align-items: center;
@@ -253,12 +274,23 @@ footer a p {
     margin: 5px 0;
   }
 
+  /* Headings */
   .normal-h1 {
     font-size: 28px;
     text-align: center;
-    left: 0;
+    position: static;
   }
 
+  h2 {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  /* Intro section */
   #intro {
     height: auto;
     padding: 20px;
@@ -268,9 +300,9 @@ footer a p {
   #intro .big-h1,
   #intro p {
     width: 100%;
-    left: 0;
-    top: 0;
     position: static;
+    top: 0;
+    left: 0;
   }
 
   #intro .big-h1 {
@@ -278,9 +310,9 @@ footer a p {
   }
 
   #intro button {
-    position: static;
-    margin: 20px auto;
     display: block;
+    margin: 20px auto;
+    position: static;
   }
 
   #intro #bg-intro-desktop {
@@ -289,6 +321,8 @@ footer a p {
 
   #intro #bg-intro-mobile {
     display: block;
+    width: 100%;
+    height: auto;
     position: static;
   }
 
@@ -299,22 +333,23 @@ footer a p {
   #about {
     height: auto;
     padding: 20px;
+    text-align: center;
   }
 
   #about .normal-h1,
   #about > p {
-    left: 0;
-    top: 0;
-    position: static;
     width: 100%;
-    text-align: center;
+    position: static;
   }
 
   #about .container {
     width: 100%;
-    left: 0;
     position: static;
     margin: 20px 0;
+  }
+
+  #about .container p {
+    width: 100%;
   }
 
   #articles {
@@ -324,21 +359,26 @@ footer a p {
 
   .containers {
     width: 100%;
-    position: static;
     margin: 20px 0;
+    position: static;
   }
 
+  .containers img {
+    width: 100%;
+    height: 30%;
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* Footer section */
   footer {
     text-align: center;
     padding: 20px;
   }
 
-  footer nav,
-  footer nav:nth-of-type(1),
-  footer nav:nth-of-type(2) {
-    position: static;
+  footer nav {
     flex-direction: column;
     align-items: center;
+    position: static;
   }
 
   footer .img,
