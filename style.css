@@ -291,22 +291,22 @@ header a:nth-of-type(5) {
   background-color: var(--White);
   border-radius: 5px;
   cursor: pointer;
-  padding: 20px;
+  padding: 0px;
 }
 
 .containers:nth-of-type(2) {
-  top: -565.9px;
-  left: 322.5px;
+  top: -525px;
+  left: 320px;
 }
 
 .containers:nth-of-type(3) {
-  top: -1108px;
-  left: 632.5px;
+  top: -1025px;
+  left: 630px;
 }
 
 .containers:nth-of-type(4) {
   top: -1650px;
-  left: 940px;
+  left: 920px;
 }
 
 .containers img {
